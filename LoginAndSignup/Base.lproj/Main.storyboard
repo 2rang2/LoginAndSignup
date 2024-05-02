@@ -16,12 +16,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="INh-jT-pRM">
-                                <rect key="frame" x="123.66666666666669" y="259" width="146" height="44"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="INh-jT-pRM" userLabel="Kakao Login Button">
+                                <rect key="frame" x="123.66666666666669" y="259" width="146" height="34.333333333333314"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="kakao_login_large_narrow"/>
+                                <buttonConfiguration key="configuration" style="plain" title="카카오로 시작하기"/>
                                 <connections>
-                                    <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y1y-cf-X1W"/>
+                                    <action selector="kakaoLoginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BfL-Nj-ZVK"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c7x-9v-VKJ">
@@ -30,7 +30,15 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="로그아웃"/>
                                 <connections>
-                                    <action selector="logoutButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XBd-B2-Lp5"/>
+                                    <action selector="logoutButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HxQ-UA-QYQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cqk-7M-QHx">
+                                <rect key="frame" x="131" y="303.33333333333331" width="131.33333333333337" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="구글로 시작하기"/>
+                                <connections>
+                                    <action selector="googleLoginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="r9w-1w-6WO"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -38,21 +46,22 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="INh-jT-pRM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="200" id="Dd6-lm-HFm"/>
+                            <constraint firstItem="cqk-7M-QHx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WF9-19-dr8"/>
                             <constraint firstItem="INh-jT-pRM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dc0-sW-mTP"/>
+                            <constraint firstItem="cqk-7M-QHx" firstAttribute="top" secondItem="INh-jT-pRM" secondAttribute="bottom" constant="10" id="kDM-oE-xwu"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="loginButton" destination="INh-jT-pRM" id="5TL-Kq-0HD"/>
-                        <outlet property="logoutButton" destination="c7x-9v-VKJ" id="NtA-ty-la7"/>
+                        <outlet property="kakaoLoginButton" destination="INh-jT-pRM" id="rev-cr-FQA"/>
+                        <outlet property="logoutButton" destination="c7x-9v-VKJ" id="PVF-bQ-Y3E"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="112" y="-27"/>
+            <point key="canvasLocation" x="110.68702290076335" y="-27.464788732394368"/>
         </scene>
     </scenes>
     <resources>
-        <image name="kakao_login_large_narrow" width="122" height="30"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
