@@ -41,19 +41,32 @@
                                     <action selector="googleLoginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="r9w-1w-6WO"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YyZ-ih-L70">
+                                <rect key="frame" x="46.666666666666657" y="215" width="300" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="leP-Bm-deV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="YyZ-ih-L70" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Br0-9d-Odt"/>
                             <constraint firstItem="INh-jT-pRM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="200" id="Dd6-lm-HFm"/>
+                            <constraint firstItem="INh-jT-pRM" firstAttribute="top" secondItem="YyZ-ih-L70" secondAttribute="bottom" constant="20" id="R5v-hC-wel"/>
                             <constraint firstItem="cqk-7M-QHx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WF9-19-dr8"/>
                             <constraint firstItem="INh-jT-pRM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dc0-sW-mTP"/>
                             <constraint firstItem="cqk-7M-QHx" firstAttribute="top" secondItem="INh-jT-pRM" secondAttribute="bottom" constant="10" id="kDM-oE-xwu"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="googleLoginButton" destination="cqk-7M-QHx" id="MLC-fj-hWi"/>
+                        <outlet property="greetingLabel" destination="YyZ-ih-L70" id="DAi-13-csg"/>
                         <outlet property="kakaoLoginButton" destination="INh-jT-pRM" id="rev-cr-FQA"/>
-                        <outlet property="logoutButton" destination="c7x-9v-VKJ" id="PVF-bQ-Y3E"/>
+                        <outlet property="logoutButton" destination="c7x-9v-VKJ" id="79j-bd-tRR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
